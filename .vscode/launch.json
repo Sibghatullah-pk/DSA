@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "s:/DSA/sort",
-      "program": "s:/DSA/sort/build/Debug/outDebug",
+      "cwd": "s:/DSA/hashing",
+      "program": "s:/DSA/hashing/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

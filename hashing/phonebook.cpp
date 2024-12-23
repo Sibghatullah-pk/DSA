@@ -56,7 +56,7 @@ void deleteContact(map<string, string> &phoneBook)
 int main()
 {
     map<string, string> phoneBook;
-    phoneBook["Ali"] = "123-456-7890";
+    phoneBook["ali"] = "123-456-7890";
     phoneBook["me"] = "987-654-3210";
     phoneBook["you"] = "555-666-7777";
 
