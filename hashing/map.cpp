@@ -27,7 +27,7 @@ int main() {
     // Iterate and print map elements
     map<int, string>::iterator p = customer.begin();
     while (p != customer.end()) {
-        cout << p->second << endl; // Corrected spelling of "second"
+        cout << p->first<< endl; // Corrected spelling of "second"
         p++;
     }
 
