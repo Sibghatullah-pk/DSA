@@ -1,18 +1,15 @@
-#include <unordered_map>
-#include <set>
 #include <vector>
 #include <iostream> // For input/output
-
 using namespace std;
 
 // Function to perform DFS on a single component
-void dfs(int node, unordered_map<int, bool> &visited, 
-         unordered_map<int, set<int>> &adj, vector<int> &component) {
+void dfs(int node, vector<bool> &visited, 
+         vector<vector<int>> &adj, vector<int> &component) {
     component.push_back(node);
     visited[node] = true;
 
     // Traverse all neighbors of the current node
-    for (auto neighbor : adj[node]) {
+    for (int neighbor : adj[node]) {
         if (!visited[neighbor]) {
             dfs(neighbor, visited, adj, component);
         }
@@ -21,19 +18,19 @@ void dfs(int node, unordered_map<int, bool> &visited,
 
 // Function to perform DFS on the entire graph
 vector<vector<int>> depthFirstSearch(int V, int E, vector<vector<int>> &edges) {
-    unordered_map<int, set<int>> adj;
+    vector<vector<int>> adj(V); // Adjacency list using vector
 
     // Prepare the adjacency list
     for (const auto &edge : edges) {
         int u = edge[0];
         int v = edge[1];
 
-        adj[u].insert(v);
-        adj[v].insert(u);
+        adj[u].push_back(v);
+        adj[v].push_back(u);
     }
 
     vector<vector<int>> ans;
-    unordered_map<int, bool> visited;
+    vector<bool> visited(V, false); // Use vector to track visited nodes
 
     // Traverse all components
     for (int i = 0; i < V; i++) {
