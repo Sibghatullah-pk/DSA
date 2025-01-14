@@ -30,6 +30,7 @@ node *buildTree(node *root)
     root->right = buildTree(root->right);
     return root;
 }
+//bfs alsp
 void levelOrder(node *root)
 {
     queue<node *> q;

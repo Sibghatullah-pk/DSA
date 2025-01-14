@@ -15,7 +15,7 @@ void prepareAdjList(unordered_map<int, set<int>> &adjList, const vector<pair<int
         // Add edge to the adjacency list
         adjList[u].insert(v);
         adjList[v].insert(u);
-    }
+    } 
 }
 
 // BFS function to traverse the graph starting from a given node
